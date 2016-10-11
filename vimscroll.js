@@ -6,7 +6,9 @@
   const getPostsDistances = () => getPosts().map(getDistanceFromTop).sort((a, b) => a - b)
   const pageDown = () => window.scrollTo(0, window.scrollY + window.innerHeight)
   const pageUp = () => window.scrollTo(0, window.scrollY - window.innerHeight)
+  // Filter any post that is beneath 20% of the top of the screen.
   const below = distance => distance > (window.scrollY + window.innerHeight/5)
+  // Filter any post above the top of the screen
   const above = distance => distance < window.scrollY
 
   const scrollDown = () => {
