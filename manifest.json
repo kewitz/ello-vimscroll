@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name":         "Ello VimScroll",
+  "version":      "1.0",
+  "description":  "Scroll to next/previews post using J and K.",
+  "author": "Leonardo Kewitz <leokewitz@gmail.com>",
+  "content_scripts": [ {
+      "js":               [ "vimscroll.js" ],
+      "matches":          [
+        "https://ello.co/*",
+        "http://ello.co/*"
+      ],
+      "run_at": "document_end"
+  } ],
+  "converted_from_user_script": true,
+  "icons": {
+    "48": "icon48.png"
+  }
+}
